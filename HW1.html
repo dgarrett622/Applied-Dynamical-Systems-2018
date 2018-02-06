@@ -11786,11 +11786,11 @@ div#notebook {
 <h1 id="MATH-6270/MAE-7760-Problem-Set-1">MATH 6270/MAE 7760 Problem Set 1<a class="anchor-link" href="#MATH-6270/MAE-7760-Problem-Set-1">&#182;</a></h1><p>This Jupyter Notebook takes Python code and generates plots and animations of the stable and unstable manifolds of the mapping (3.7.1)
 $$ x_{n+1} = x_n + y_n + kx_n\left(x_n-1\right) $$
 $$ y_{n+1} = y_n + kx_n\left(x_n-1\right) $$
-and the inverse mapping (3.7.4)
+and its inverse mapping (3.7.4)
 $$ x_n = x_{n+1} - y_{n+1} $$
 $$ y_n = y_{n+1} - kx_n\left(x_n-1\right) $$
 from Arrowsmith and Place.
-The plots are generated using 15 iterations of this mapping. These plots rely on the restriction that $ k &gt; 0 $. The homoclinic tangle can be seen visually for values $ k \gtrsim 1.2 $.</p>
+The plots are generated using 15 iterations. These plots rely on the restriction that $ k &gt; 0 $. The homoclinic tangle can be seen visually for values $ k \gtrsim 1.2 $.</p>
 
 </div>
 </div>
@@ -11806,7 +11806,7 @@ The plots are generated using 15 iterations of this mapping. These plots rely on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -12026,7 +12026,7 @@ The plots are generated using 15 iterations of this mapping. These plots rely on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">kplot</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
@@ -12042,7 +12042,7 @@ The plots are generated using 15 iterations of this mapping. These plots rely on
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -12793,15 +12793,15 @@ dUd1FfzgAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="gen_animation-Demo"><code>gen_animation</code> Demo<a class="anchor-link" href="#gen_animation-Demo">&#182;</a></h2><p>The function <code>gen_animation</code> takes in a value (or list of values) for the $ k $ parameter and desired number of iterations of the mapping. It generates 100 points on an interval of length 0.0001 on the stable and unstable manifolds. It then generates an animation of the successive mappings forward in time. For example, let $ k = 1.5 $ with 15 iterations.</p>
-<h3 id="Note">Note<a class="anchor-link" href="#Note">&#182;</a></h3><p>The static version displayed on github does not show the animation. To see the animations, please see the <a href="https://rawgit.com/dgarrett622/Applied-Dynamical-Systems-2018/master/HW1.html">HW1.html file</a>. If the Jupyter Notebook is downloaded and run locally, or the code is implemented in python, the <code>gen_animation</code> function generates an animation with the following code:</p>
+<h2 id="gen_animation-Demo"><code>gen_animation</code> Demo<a class="anchor-link" href="#gen_animation-Demo">&#182;</a></h2><p>The function <code>gen_animation</code> takes in a value for the $ k $ parameter and desired number of iterations of the mapping. It generates 100 points on an interval of length 0.0001 on the stable and unstable manifolds. It then generates an animation of the successive mappings forward in time. For example, let $ k = 1.5 $ with 15 iterations.</p>
+<h3 id="Note">Note<a class="anchor-link" href="#Note">&#182;</a></h3><p>The static version of this Notebook on github will not show the animation. To see the animations, please see the <a href="https://rawgit.com/dgarrett622/Applied-Dynamical-Systems-2018/master/HW1.html">HW1.html file</a>. If the Jupyter Notebook is downloaded and run locally, or the code is implemented in python, the <code>gen_animation</code> function generates an animation with the following code:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">anim</span> <span class="o">=</span> <span class="n">gen_animation</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
@@ -12818,7 +12818,7 @@ dUd1FfzgAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13817,14 +13817,13 @@ cGwAAAAAAAAAAAAAAAAsaWxzdAAAACSpdG9vAAAAHGRhdGEAAAABAAAAAExhdmY1OC43LjEwMA==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="n">ks</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">ks</span><span class="p">:</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">kplot</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
